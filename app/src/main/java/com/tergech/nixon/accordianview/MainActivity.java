@@ -1,5 +1,6 @@
 package com.tergech.nixon.accordianview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -43,10 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
+                                + listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT)
                         .show();
+                //passing data to the display activity
+                String data=listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
+                Intent intent=new Intent(MainActivity.this,display.class);
+                intent.putExtra("data",data);
+                startActivity(intent);
                 return false;
             }
         });
