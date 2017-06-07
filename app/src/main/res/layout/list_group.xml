@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:background="#487197">
+
     <TextView
         android:id="@+id/lblListHeader"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        android:textSize="17dp"
+        android:textSize="20dp"
         android:textColor="#edede7" />
 </LinearLayout>
