@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81c1ef"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edt_design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Lecture Notes App"
+        android:textSize="42sp"
+        android:textColor="#FFE9E0E0" />
+
+</LinearLayout>
