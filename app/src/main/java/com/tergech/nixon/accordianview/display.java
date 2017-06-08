@@ -28,12 +28,22 @@ public class display extends AppCompatActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         topichead=bundle.getString("topichead");
-        this.setTitle(topichead);
+        this.setTitle(topichead+" Notes");
 
         String data=bundle.getString("data");
 
-        tvDisplay.setText(data);
-        webView.loadUrl(“file:///android_asset/help/help.html”);
+        tvDisplay.setText(data+" Notes");
+        webView.getSettings().setJavaScriptEnabled(true);
+        switch (data)
+        {
+            case "SubTopic 1.1":
+                webView.loadUrl("file:///android_asset/hello.html");
+                break;
+            default:
+                webView.loadUrl("file:///android_asset/no_notes.html");
+        }
+        //webView.loadUrl("file:///android_asset/hello.html");
+
     }
 
     @Override

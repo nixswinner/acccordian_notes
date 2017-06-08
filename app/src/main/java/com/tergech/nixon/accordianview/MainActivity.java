@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,15 +40,16 @@ public class MainActivity extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 // TODO Auto-generated method stub
-                Toast.makeText(
+               /* Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
                                 + listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT)
-                        .show();
+                        .show();*/
                 //passing data to the display activity
                 String data=listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
                 String topichead=listDataHeader.get(groupPosition);
+
                 Intent intent=new Intent(MainActivity.this,display.class);
                 intent.putExtra("data",data);
                 intent.putExtra("topichead",topichead);
@@ -125,4 +125,5 @@ public class MainActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(4), Topic5);
         listDataChild.put(listDataHeader.get(5), Topic6);
     }
+
 }
